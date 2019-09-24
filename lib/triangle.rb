@@ -18,9 +18,7 @@ class Triangle
   end 
   
   def kind 
-
-    
-    elsif s_one == s_two && s_two == s_three 
+    if s_one == s_two && s_two == s_three 
       :equilateral 
     elsif s_one == s_two || s_two == s_three || s_three == s_one
       :isosceles
