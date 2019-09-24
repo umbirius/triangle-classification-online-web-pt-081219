@@ -29,8 +29,5 @@ class Triangle
 
 
   class TriangleError < StandardError
-    def message
-     "You must enter side lengths equal to a valid triangle"
-    end 
   end 
 end 
