@@ -43,3 +43,5 @@ class TriangleError < StandardError
     "You must enter side lengths equal to a valid triangle"
   end 
 end 
+
+end 
