@@ -1,20 +1,11 @@
 class Triangle
   
-  attr_accessor :s_one, :s_two, :s_three
+  attr_reader :s_one, :s_two, :s_three
   
   def initialize(s_one, s_two, s_three)
-    # if (s_one + s_two < s_three) || (s_two + s_three < s_one) || (s_three + s_one > s_two) || s_one <= 0 || s_two <= 0 || s_three < 0 
-    #   begin 
-    #     raise TriangleError
-    #   rescue TriangleError => error 
-    #       puts error.message
-    #   end
-    # else 
       @s_one = s_one
       @s_two = s_two
       @s_three = s_three
-    # end
-    
   end 
   
   def kind 
@@ -28,16 +19,10 @@ class Triangle
   end 
   
   def validate_triangle
-      if (s_one + s_two < s_three) || (s_two + s_three < s_one) || (s_three + s_one < s_two) || s_one <= 0 || s_two <= 0 || s_three <= 0 
-      begin 
+      if (s_one + s_two < s_three) || (s_two + s_three < s_one) || (s_three + s_one < s_two) || s_one <= 0 || s_two <= 0 || s_three <= 0
         raise TriangleError
-      rescue TriangleError => error 
-          puts error.message
-      end
-      end 
-  
-  end
-end 
+    end
+  end 
 
 class TriangleError < StandardError
   def message
