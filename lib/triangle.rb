@@ -18,12 +18,7 @@ class Triangle
   end 
   
   def kind 
-    if (s_one + s_two < s_three) || (s_two + s_three < s_one) || (s_three + s_one < s_two) || s_one <= 0 || s_two <= 0 || s_three <= 0 
-      begin 
-        raise TriangleError
-      rescue TriangleError => error 
-          puts error.message
-      end
+
     
     elsif s_one == s_two && s_two == s_three 
       :equilateral 
@@ -32,6 +27,15 @@ class Triangle
     else
       :scalene
     end 
+  end 
+  
+  def validate_triangle
+      if (s_one + s_two < s_three) || (s_two + s_three < s_one) || (s_three + s_one < s_two) || s_one <= 0 || s_two <= 0 || s_three <= 0 
+      begin 
+        raise TriangleError
+      rescue TriangleError => error 
+          puts error.message
+      end
   end 
   
   class TriangleError < StandardError
