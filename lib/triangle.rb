@@ -21,11 +21,6 @@ class Triangle
     end 
   end 
   
-  def validate_triangle
-      if (s_one + s_two < s_three) || (s_two + s_three < s_one) || (s_three + s_one < s_two) || s_one <= 0 || s_two <= 0 || s_three <= 0
-        raise TriangleError
-    end
-  end 
 
 
   class TriangleError < StandardError
